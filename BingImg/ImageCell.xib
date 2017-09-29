@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ImageCell" customModule="BingImg" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TP-IK-Hb8">
+                    <rect key="frame" x="8" y="8" width="584" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Yot-rL-AYl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cMT-Yi-KxL">
+                    <rect key="frame" x="0.0" y="64" width="600" height="534"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zt-Ky-BhL">
+                    <rect key="frame" x="0.0" y="598" width="600" height="2"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="ZEG-z0-AkI"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFX-VE-vDC">
+                    <rect key="frame" x="8" y="36" width="584" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="rCX-iA-OYk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3TP-IK-Hb8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="CIY-oN-Yn2"/>
+                <constraint firstItem="6zt-Ky-BhL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FPU-1e-HPG"/>
+                <constraint firstAttribute="trailing" secondItem="cMT-Yi-KxL" secondAttribute="trailing" id="IDN-bi-VrJ"/>
+                <constraint firstItem="6zt-Ky-BhL" firstAttribute="top" secondItem="cMT-Yi-KxL" secondAttribute="bottom" id="N8I-Sl-RS2"/>
+                <constraint firstItem="bFX-VE-vDC" firstAttribute="top" secondItem="3TP-IK-Hb8" secondAttribute="bottom" constant="8" id="Tev-Bd-NiW"/>
+                <constraint firstAttribute="trailing" secondItem="bFX-VE-vDC" secondAttribute="trailing" constant="8" id="Uxq-hB-fuk"/>
+                <constraint firstItem="3TP-IK-Hb8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="cNF-PF-6nn"/>
+                <constraint firstItem="bFX-VE-vDC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="dQp-pI-EFa"/>
+                <constraint firstAttribute="trailing" secondItem="3TP-IK-Hb8" secondAttribute="trailing" constant="8" id="ktW-qO-mXH"/>
+                <constraint firstAttribute="trailing" secondItem="6zt-Ky-BhL" secondAttribute="trailing" id="oGk-3l-V8M"/>
+                <constraint firstAttribute="bottom" secondItem="6zt-Ky-BhL" secondAttribute="bottom" id="qPr-fm-hHz"/>
+                <constraint firstItem="cMT-Yi-KxL" firstAttribute="top" secondItem="bFX-VE-vDC" secondAttribute="bottom" constant="8" id="r3u-Ue-w4Y"/>
+                <constraint firstItem="cMT-Yi-KxL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tHO-3g-fVQ"/>
+            </constraints>
+            <connections>
+                <outlet property="imageViewer" destination="cMT-Yi-KxL" id="BRD-HK-Sij"/>
+                <outlet property="nameOfImage" destination="3TP-IK-Hb8" id="Wwf-p1-XlV"/>
+                <outlet property="uploadDate" destination="bFX-VE-vDC" id="9Oc-I3-vu3"/>
+            </connections>
+            <point key="canvasLocation" x="386" y="326"/>
+        </view>
+    </objects>
+</document>

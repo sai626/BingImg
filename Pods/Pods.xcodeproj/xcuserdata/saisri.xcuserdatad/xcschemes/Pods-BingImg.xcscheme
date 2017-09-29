@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A7E36C41F7BB96500F90C99"
-               BuildableName = "BingImg.app"
-               BlueprintName = "BingImg"
-               ReferencedContainer = "container:BingImg.xcodeproj">
+               BlueprintIdentifier = "933BBF24A24994ED1E27F6CDCCC9FBA3"
+               BuildableName = "Pods_BingImg.framework"
+               BlueprintName = "Pods-BingImg"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A7E36C41F7BB96500F90C99"
-            BuildableName = "BingImg.app"
-            BlueprintName = "BingImg"
-            ReferencedContainer = "container:BingImg.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A7E36C41F7BB96500F90C99"
-            BuildableName = "BingImg.app"
-            BlueprintName = "BingImg"
-            ReferencedContainer = "container:BingImg.xcodeproj">
+            BlueprintIdentifier = "933BBF24A24994ED1E27F6CDCCC9FBA3"
+            BuildableName = "Pods_BingImg.framework"
+            BlueprintName = "Pods-BingImg"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A7E36C41F7BB96500F90C99"
-            BuildableName = "BingImg.app"
-            BlueprintName = "BingImg"
-            ReferencedContainer = "container:BingImg.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
