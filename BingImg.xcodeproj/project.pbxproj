@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A6CA66E1F84B23F005F7C9C /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6CA66D1F84B23F005F7C9C /* DateFormatter.swift */; };
 		3A7E36C91F7BB96500F90C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7E36C81F7BB96500F90C99 /* AppDelegate.swift */; };
 		3A7E36CB1F7BB96500F90C99 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7E36CA1F7BB96500F90C99 /* FirstViewController.swift */; };
 		3A7E36D01F7BB96500F90C99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7E36CE1F7BB96500F90C99 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A6CA66D1F84B23F005F7C9C /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		3A7E36C51F7BB96500F90C99 /* BingImg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BingImg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A7E36C81F7BB96500F90C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A7E36CA1F7BB96500F90C99 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				3A7E36E21F7BB9F100F90C99 /* WebRequests.swift */,
 				3A7E36DD1F7BB9F100F90C99 /* ImageCache.swift */,
+				3A6CA66D1F84B23F005F7C9C /* DateFormatter.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -246,6 +249,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireSwiftyJSON/AlamofireSwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -253,6 +258,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireSwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +316,7 @@
 				3A7E36F01F7BBE4300F90C99 /* StoriesCollectionCell.swift in Sources */,
 				3A7E36E61F7BB9F100F90C99 /* TestData.swift in Sources */,
 				3A7E36E71F7BB9F100F90C99 /* TestData2.swift in Sources */,
+				3A6CA66E1F84B23F005F7C9C /* DateFormatter.swift in Sources */,
 				3A7E36E91F7BB9F100F90C99 /* WebRequests.swift in Sources */,
 				3A7E36CB1F7BB96500F90C99 /* FirstViewController.swift in Sources */,
 				3A7E36F71F7BC54A00F90C99 /* MyStoryCell.swift in Sources */,
@@ -463,6 +471,7 @@
 				3A7E36DB1F7BB96500F90C99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

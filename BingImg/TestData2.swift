@@ -14,7 +14,7 @@ class TestData2 {
     
     /*Source URL :- https://www.bing.com/cr?IG=D52594E9BC5347A3B762A69FBFF727B6&CID=18F9C143A66F6E4C32CACA4BA78A6F77&rd=1&h=yrKu6oqsnVqRpMJZjz3CjNH-H_cwD4U8SY-E6m05x2s&v=1&r=https%3a%2f%2fwww.bing.com%2fimages%2fsearch%3fq%3dabstract%2520art%26FORM%3dOIIARP&p=DevEx,5254.1
  */
-    func initialize() {
+    func initialize() {/*
         let row1 = DataObject()
         row1.name = "Test 0"
         row1.url = NSURL(string: "http://www.bing.com/cr?IG=D52594E9BC5347A3B762A69FBFF727B6&CID=18F9C143A66F6E4C32CACA4BA78A6F77&rd=1&h=kEGTqKQu94cpuzOOM4v4LMyVda5g32cdPcANalCLjaA&v=1&r=http%3a%2f%2f1.bp.blogspot.com%2f-rtuWyqGPY98%2fUKCPpM3ifpI%2fAAAAAAAAASI%2fM_OYkOrk2KE%2fs1600%2fnew_york_city_art_abstract_painting_by_debra_hurd_69b92f9568dcc6f594970223cec6df0e.jpg&p=DevEx,5009.1")
@@ -64,6 +64,7 @@ class TestData2 {
         //row5.imageSizeCalc()
         row1.accentColor = UIColor(red: 0.29, green: 0.05, blue: 0.35, alpha: 1)
         data.append(row5)
+ */
         
     }
     

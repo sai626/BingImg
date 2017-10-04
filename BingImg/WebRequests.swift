@@ -63,12 +63,13 @@ class WebRequest {
                 var data = DataObject()
                 for value in values {
                     data.parseJSON(value)
-                    print(value)
+                    //print(value)
                     objects.append(data)
                     data = DataObject()
                 }
                 
             }
+            print("Downloaded data from internet")
             completion(objects)
         }
         

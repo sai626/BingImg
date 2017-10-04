@@ -13,11 +13,28 @@ class ImageCache {
     
     let tempImageDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
     
+    func saveImage(id: String, image: UIImage, encodingFormat: String){
+        let fileManager = NSFileManager.defaultManager()
+        var paths = tempImageDirectory.stringByAppendingPathComponent("Photo_").stringByAppendingString(id)
+        //print(paths)
+        let imageData: NSData!
+        
+        if encodingFormat == "jpeg" {
+            imageData = UIImageJPEGRepresentation(image, 1)
+            paths = paths.stringByAppendingString(".jpeg")
+        } else {
+            imageData = UIImagePNGRepresentation(image)
+            paths = paths.stringByAppendingString(".png")
+        }
+        fileManager.createFileAtPath(paths as String, contents: imageData, attributes: nil)
+    }
+    
     func saveImage(id: String, image: UIImage){
         let fileManager = NSFileManager.defaultManager()
         let paths = tempImageDirectory.stringByAppendingPathComponent("Photo_").stringByAppendingString(id)
-        print(paths)
+        //print(paths)
         let imageData = UIImagePNGRepresentation(image)
+        
         fileManager.createFileAtPath(paths as String, contents: imageData, attributes: nil)
     }
     
@@ -29,5 +46,15 @@ class ImageCache {
         }else{
             return nil
         }
-    }    
+    }
+    
+    func retriveImage(id: String, encodingFormat: String) -> UIImage?{
+        let fileManager = NSFileManager.defaultManager()
+        let imagePAth = tempImageDirectory.stringByAppendingPathComponent("Photo_").stringByAppendingString(id).stringByAppendingString(".").stringByAppendingString(encodingFormat)
+        if fileManager.fileExistsAtPath(imagePAth){
+            return UIImage(contentsOfFile: imagePAth)
+        }else{
+            return nil
+        }
+    }
 }

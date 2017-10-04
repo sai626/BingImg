@@ -12,7 +12,7 @@ class TestData {
     
     var data = [DataObject]()
     
-    func initialize() {
+    func initialize() {/*
         let row1 = DataObject()
         row1.name = "Test 0"
         row1.url = NSURL(string: "https://www.bing.com/cr?IG=1CAFD5814FB94AF39827899BB453C71B&CID=2DB655174DBC61A800AB5E144C7C60D3&rd=1&h=1swxeCoemXYd9LjaeAyH-vmUcqZo7WEtZ5PlUgK1Ey0&v=1&r=https%3a%2f%2fc1.staticflickr.com%2f8%2f7694%2f17158667357_38d8a99341_n.jpg&p=DevEx,5009.1")
@@ -56,7 +56,7 @@ class TestData {
         row5.width = 300
         //row5.imageSizeCalc()
         row1.accentColor = UIColor(red: 0.29, green: 0.05, blue: 0.35, alpha: 1)
-        data.append(row5)
+        data.append(row5)*/
         
     }
     

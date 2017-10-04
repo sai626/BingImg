@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
-class FirstViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+protocol ViewControllerDelegate {
+    func updateLayout()
+    func getRealm() -> Realm
+}
+
+class FirstViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, ViewControllerDelegate {
     
     var dataObjects = [DataObject]()
-    let searchString = "Abstract Monochrome"
+    let searchString = "Pink Floyd"
     let webRequest = WebRequest()
+    let realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +28,8 @@ class FirstViewController: UICollectionViewController, UICollectionViewDelegateF
         collectionView?.registerNib(UINib(nibName: "ImageCell", bundle: nil), forCellWithReuseIdentifier: "dataCell")
         
         let URL = webRequest.generateQueryURL(searchString)
+        dataObjects = Array(realm.objects(DataObject.self))
+        collectionView?.reloadData()
         
         webRequest.getDataObjects(URL!){
             
@@ -29,8 +38,19 @@ class FirstViewController: UICollectionViewController, UICollectionViewDelegateF
             //print(self.dataObjects.count)
             self.collectionView?.reloadData()
             
+            try! self.realm.write{
+                self.realm.delete(self.realm.objects(DataObject.self))
+            }
+            
+            for obj in self.dataObjects {
+                try! self.realm.write{
+                    self.realm.add(obj)
+                }
+            }
+            
         }
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +61,6 @@ class FirstViewController: UICollectionViewController, UICollectionViewDelegateF
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataObjects.count + 1
-        
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -51,8 +70,8 @@ class FirstViewController: UICollectionViewController, UICollectionViewDelegateF
             return cell
         }else {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("dataCell", forIndexPath: indexPath) as! ImageCell
-            print(indexPath.row)
-            cell.initializeCellWithData(dataObjects[indexPath.row - 1])
+            //print(indexPath.row)
+            cell.initializeCellWithDataOfCollectionView(self, data: dataObjects[indexPath.row - 1])
             return cell
         }
     }
@@ -62,8 +81,17 @@ class FirstViewController: UICollectionViewController, UICollectionViewDelegateF
         if indexPath.row == 0 {
             return CGSize(width: UIScreen.mainScreen().bounds.width, height: 60)
         }else {
-            return CGSize(width: UIScreen.mainScreen().bounds.width, height: CGFloat(dataObjects[indexPath.row - 1].height + 60))
+            return CGSize(width: UIScreen.mainScreen().bounds.width, height: CGFloat(dataObjects[indexPath.row - 1].imageHeight + 65))
         }
+    }
+    
+    func updateLayout() {
+        print("Invalidating layout")
+        collectionView!.collectionViewLayout.invalidateLayout()
+    }
+    
+    func getRealm() -> Realm{
+        return realm
     }
 }
 

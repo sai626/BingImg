@@ -8,4 +8,5 @@ target 'BingImg' do
   # Pods for BingImages
   pod 'AlamofireImage', '~> 2.5'
   pod 'AlamofireSwiftyJSON'
+  pod 'RealmSwift', '~> 2.3.0’
 end
